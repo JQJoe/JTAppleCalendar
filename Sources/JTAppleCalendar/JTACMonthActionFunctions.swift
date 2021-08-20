@@ -117,6 +117,8 @@ extension JTACMonthView {
             if (isAnimationEnabled && self.calendarOffsetIsAlreadyAtScrollPosition(forOffset: point)) ||
                 !isAnimationEnabled {
                 self.scrollViewDidEndScrollingAnimation(self)
+            }else {
+                self.isScrollInProgress = false
             }
         }
     }
